@@ -1,13 +1,13 @@
 {% set name = "HofstadterTools" %}
-{% set version = "1.0.4" %}
+{% set version = "1.0.5" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/HofstadterTools-{{ version }}.tar.gz
-  sha256: c14a80164c72cb905cac9a58739aa985caa44443a042b803e3a2efab4d28a42f
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | lower }}-{{ version }}.tar.gz
+  sha256: 8f0a92a31e254098b12a408466cdbdda1ffc34d1eb7e9e46b085eb8ffe55bc57
 
 build:
   entry_points:
@@ -17,7 +17,7 @@ build:
     - plot_butterfly = HT.plot.plot_butterfly:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -51,8 +51,8 @@ test:
 about:
   home: https://hofstadter.tools
   summary: A Python package for analyzing the Hofstadter model.
-  description: HofstadterTools (HT) is a set of Python programs and classes for analyzing the Hofstadter model, which describes the behavior of non-interacting quantum particles hopping on a lattice coupled to a gauge field. This package can be used to compute the band structure of a generalized Hofstadter model on any regular
-    Euclidean lattice, as well as its key properties, such as quantum geometry and topology.
+  description: HofstadterTools (HT) is a set of Python programs and classes for analyzing the Hofstadter model, which describes the behavior of non-interacting quantum particles hopping on a lattice coupled to a gauge field. This package can be used to compute the band structure of a generalized Hofstadter model on any
+    regular Euclidean lattice, as well as its key properties, such as quantum geometry and topology.
   license: GPL-3.0-only
   license_family: GPL
   license_file: LICENSE
