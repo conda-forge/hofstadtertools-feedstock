@@ -1,5 +1,5 @@
 {% set name = "HofstadterTools" %}
-{% set version = "1.0.5" %}
+{% set version = "1.0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | lower }}-{{ version }}.tar.gz
-  sha256: 8f0a92a31e254098b12a408466cdbdda1ffc34d1eb7e9e46b085eb8ffe55bc57
+  sha256: 854edda808991a1e66b108e0b7b750caaf83cfe6a76d3e80e033d91ca9d34230
 
 build:
   entry_points:
